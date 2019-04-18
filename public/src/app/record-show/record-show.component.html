@@ -1,0 +1,7 @@
+<div class="border" *ngFor="let record of variableInShowComponent">
+  <p >{{ record.title }}</p>
+  <p >{{ record.artist }}</p>
+  <p >{{ record.date }}</p>
+  <p><button (click)="sendRecordToEdit(record)">Edit</button></p>
+</div>
+<app-record-edit *ngIf="ShowRecord.status" [recordToUpdate]="EditRecord" [showRecord]="ShowRecord"></app-record-edit>
